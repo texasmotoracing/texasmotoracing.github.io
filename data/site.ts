@@ -3,6 +3,9 @@
  * Change copy, links and numbers in this file — not in the components.
  */
 
+/** Prefixes a /public path with the deploy base path (e.g. /TexasMotoRacing on a GitHub project site). */
+export const asset = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${path}`;
+
 export const site = {
   name: 'Texas Moto Racing',
   short: 'TMR',
@@ -106,9 +109,9 @@ export const tiers = [
 ];
 
 export const marks = [
-  { src: '/logos/crest.png', alt: 'Crest', caption: 'Crest · official' },
-  { src: '/logos/plate.png', alt: 'Number board', caption: 'Number board · livery' },
-  { src: '/logos/speed.png', alt: 'Speed mark', caption: 'Speed mark · apparel' },
+  { src: asset('/logos/crest.png'), alt: 'Crest', caption: 'Crest · official' },
+  { src: asset('/logos/plate.png'), alt: 'Number board', caption: 'Number board · livery' },
+  { src: asset('/logos/speed.png'), alt: 'Speed mark', caption: 'Speed mark · apparel' },
 ];
 
 /** The HornsLink registration answers, shown to prospective members. */

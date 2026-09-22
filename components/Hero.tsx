@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { site } from '@/data/site';
+import { site, asset } from '@/data/site';
 
 export default function Hero() {
   return (
@@ -20,7 +20,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="hero-crest">
-          <Image src="/logos/crest.png" alt={`${site.name} crest`} width={700} height={700} priority />
+          <Image src={asset('/logos/crest.png')} alt={`${site.name} crest`} width={700} height={700} priority />
         </div>
       </div>
     </header>

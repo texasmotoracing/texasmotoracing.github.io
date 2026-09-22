@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { site, membership } from '@/data/site';
+import { site, membership, asset } from '@/data/site';
 
 export default function Join() {
   return (
@@ -30,7 +30,7 @@ export default function Join() {
             ))}
           </dl>
         </div>
-        <Image src="/logos/speed.png" alt="" width={700} height={700} />
+        <Image src={asset('/logos/speed.png')} alt="" width={700} height={700} />
       </div>
     </section>
   );

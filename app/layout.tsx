@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { site } from '@/data/site';
+import { site, asset } from '@/data/site';
 
 export const metadata: Metadata = {
   // TODO: set to your real URL once deployed — used for link previews.
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: site.name,
     description: `${site.tagline}, competing in the MotoStudent International Competition.`,
-    images: ['/logos/crest-full.png'],
+    images: [asset('/logos/crest-full.png')],
     type: 'website',
   },
 };

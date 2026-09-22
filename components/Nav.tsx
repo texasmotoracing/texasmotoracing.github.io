@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { site } from '@/data/site';
+import { site, asset } from '@/data/site';
 
 const links = [
   ['#competition', 'Competition'],
@@ -14,7 +14,7 @@ export default function Nav() {
     <nav className="nav">
       <div className="wrap">
         <a className="brand" href="#top">
-          <Image src="/logos/icon.png" alt="" width={38} height={38} />
+          <Image src={asset('/logos/icon.png')} alt="" width={38} height={38} />
           <b>{site.name}</b>
         </a>
         {links.map(([href, label]) => (

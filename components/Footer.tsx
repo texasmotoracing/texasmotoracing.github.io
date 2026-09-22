@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import { site } from '@/data/site';
+import { site, asset } from '@/data/site';
 
 export default function Footer() {
   return (
     <footer>
       <div className="wrap">
         <div>
-          <Image src="/logos/ut-white.png" alt="" width={120} height={62} style={{ opacity: .9, display: 'block', marginBottom: 12, height: 'auto' }} />
+          <Image src={asset('/logos/ut-white.png')} alt="" width={120} height={62} style={{ opacity: .9, display: 'block', marginBottom: 12, height: 'auto' }} />
           <p style={{ margin: '0 0 4px' }}><strong>{site.name}</strong></p>
           <p className="muted" style={{ margin: 0 }}>{site.university} · {site.department}</p>
         </div>
