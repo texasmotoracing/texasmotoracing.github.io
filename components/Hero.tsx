@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { site, asset } from '@/data/site';
 
 export default function Hero() {
@@ -15,8 +16,8 @@ export default function Hero() {
           </p>
           <p className="lede">More than twenty countries compete. No Texas university ever has.</p>
           <div className="btns">
-            <a className="btn" href="#join">Join the founding class</a>
-            <a className="btn ghost" href="#sponsor">Sponsor the build</a>
+            <Link className="btn" href="/join/">Join the founding class</Link>
+            <Link className="btn ghost" href="/sponsor/">Sponsor the build</Link>
           </div>
         </div>
         <div className="hero-crest">

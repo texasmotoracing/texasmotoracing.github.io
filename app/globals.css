@@ -29,7 +29,8 @@ img{max-width:100%;height:auto}
 .brand img{width:38px;height:38px}
 .brand b{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:18px}
 .nav .lnk{font-family:var(--display);text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:700;color:var(--muted);text-decoration:none}
-.nav .lnk:hover{color:var(--cream)}
+.nav .lnk:hover,.nav .lnk[aria-current=page]{color:var(--cream)}
+.nav .lnk[aria-current=page]{box-shadow:inset 0 -2px var(--orange-lt)}
 
 .btn{display:inline-block;font-family:var(--display);text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:15px;text-decoration:none;padding:14px 28px;border:2px solid var(--orange);color:var(--cream);background:var(--orange);transition:background .16s,color .16s}
 .btn:hover{background:#A64A00;border-color:#A64A00}
