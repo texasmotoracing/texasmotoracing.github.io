@@ -20,7 +20,7 @@ export const site = {
 
   // TODO: paste your real links. Until you do, the buttons point at "#".
   links: {
-    interestForm: '#',
+    interestForm: 'https://docs.google.com/forms/d/e/1FAIpQLSc89B1AfRKKasxbUqfGXaV42CE8RPRzphLMGyNOvnRMPZ_96Q/viewform',
     application: '#',
     instagram: '#',
   },
