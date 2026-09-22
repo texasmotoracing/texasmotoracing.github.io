@@ -21,16 +21,13 @@ jobs:
         with:
           node-version: 22
       - run: npm install
-      - run: |
-          OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
-          REPO=$(echo "${{ github.event.repository.name }}" | tr '[:upper:]' '[:lower:]')
-          if [ "$REPO" = "$OWNER.github.io" ]; then
-            export NEXT_PUBLIC_BASE_PATH=""
-          else
-            export NEXT_PUBLIC_BASE_PATH="/${{ github.event.repository.name }}"
-          fi
-          echo "base path: '$NEXT_PUBLIC_BASE_PATH'"
-          npm run build
+      # Reads the Pages settings: base_path is "/REPO" for a project site and ""
+      # once a custom domain is set, so the build always matches where it's served.
+      - id: pages
+        uses: actions/configure-pages@v5
+      - run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
