@@ -27,7 +27,7 @@ export const site = {
   links: {
     interestForm: 'https://docs.google.com/forms/d/e/1FAIpQLSc89B1AfRKKasxbUqfGXaV42CE8RPRzphLMGyNOvnRMPZ_96Q/viewform',
     application: 'https://docs.google.com/forms/d/e/1FAIpQLSdz_d1V0xsM_rPFiV7LIxhrIZdoXmOgDgBvj9ObmGnOziaGJw/viewform',
-    instagram: '#',
+    instagram: 'https://www.instagram.com/texasmotoracing/',
     linkedin: '#',
     // A payment link (Stripe, Venmo, UT giving page…). The Donate buttons stay hidden until this is set.
     donate: '',
