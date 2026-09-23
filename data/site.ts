@@ -114,8 +114,8 @@ export const subteams = [
  * shows the role as open and links to the member application. Photos go in public/team/.
  */
 export const leadership: { role: string; name: string; photo?: string }[] = [
-  { role: 'Team Principal', name: '' },
-  { role: 'Technical Director', name: '' },
+  { role: 'Team Principal', name: 'Mario T Hernandez Jr' },
+  { role: 'Technical Director', name: 'John Moreno' },
   ...subteams.map((t) => ({ role: `${t.name} lead`, name: '' })),
   { role: 'Faculty tutor', name: '' },
 ];

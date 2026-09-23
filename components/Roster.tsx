@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import { site, leadership, asset } from '@/data/site';
 
-const initials = (name: string) => name.split(' ').map((w) => w[0]).join('').slice(0, 2);
+// First and last name, skipping middle initials and suffixes: "Mario T Hernandez Jr" -> "MH".
+const initials = (name: string) => {
+  const words = name.split(' ').filter((w) => !/^(jr|sr|ii|iii|iv)\.?$/i.test(w));
+  return (words[0][0] + (words.length > 1 ? words[words.length - 1][0] : '')).toUpperCase();
+};
 
 export default function Roster() {
   return (
