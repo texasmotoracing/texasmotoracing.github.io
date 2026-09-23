@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { site, leadership, asset } from '@/data/site';
 
-// First and last name, skipping middle initials and suffixes: "Mario T Hernandez Jr" -> "MH".
+// First and last name, skipping titles and suffixes: "Mario T Hernandez Jr" -> "MH", "Dr. Adrian Rodriguez" -> "AR".
 const initials = (name: string) => {
-  const words = name.split(' ').filter((w) => !/^(jr|sr|ii|iii|iv)\.?$/i.test(w));
+  const words = name.split(' ').filter((w) => !/^(dr|prof|mr|ms|mrs|jr|sr|ii|iii|iv)\.?$/i.test(w));
   return (words[0][0] + (words.length > 1 ? words[words.length - 1][0] : '')).toUpperCase();
 };
 
