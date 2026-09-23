@@ -26,7 +26,7 @@ img{max-width:100%;height:auto}
 .nav{position:sticky;top:0;z-index:50;background:rgba(12,23,39,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;gap:22px;min-height:64px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream);margin-right:auto}
-.brand img{width:38px;height:38px}
+.brand img{height:40px;width:auto}
 .brand b{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:18px}
 .nav .lnk{font-family:var(--display);text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:700;color:var(--muted);text-decoration:none}
 .nav .lnk:hover,.nav .lnk[aria-current=page]{color:var(--cream)}
@@ -83,6 +83,8 @@ tr.now td{background:#1E3050} tr.now td.when{color:var(--orange-lt)}
 .kit{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
 .kit figure{margin:0;background:var(--surface);border:1px solid var(--line);padding:22px;text-align:center}
 .kit img{width:100%;max-width:280px;height:auto}
+.kit .wordmark{grid-column:1/-1;padding:36px 22px}
+.kit .wordmark img{max-width:560px}
 .kit figcaption{font-family:var(--display);text-transform:uppercase;letter-spacing:.14em;font-size:12.5px;color:var(--muted);margin-top:14px}
 
 .spec{display:grid;grid-template-columns:repeat(2,1fr);margin-top:36px;border:1px solid var(--line)}

@@ -110,6 +110,8 @@ export const tiers = [
   { name: 'Works', amount: '$15,000+', perks: ['Title placement on the bike and team truck', 'Everything in Grid', 'Design reviews with the team, on your terms'] },
 ];
 
+export const wordmark = { src: asset('/logos/bike.png'), alt: 'Texas Moto Racing bike wordmark', caption: 'Wordmark · the bike' };
+
 export const marks = [
   { src: asset('/logos/crest.png'), alt: 'Crest', caption: 'Crest · official' },
   { src: asset('/logos/plate.png'), alt: 'Number board', caption: 'Number board · livery' },
