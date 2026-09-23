@@ -24,9 +24,9 @@ img{max-width:100%;height:auto}
 .stripe{height:14px;background:linear-gradient(135deg,transparent 0 40%,var(--orange) 40% 55%,transparent 55% 62%,var(--orange-lt) 62% 70%,transparent 70%) 0 0/120px 14px repeat-x}
 
 .nav{position:sticky;top:0;z-index:50;background:rgba(12,23,39,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;gap:22px;min-height:64px;flex-wrap:wrap}
+.nav .wrap{display:flex;align-items:center;gap:22px;min-height:76px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream);margin-right:auto}
-.brand img{height:40px;width:auto}
+.brand img{height:56px;width:auto}
 .brand b{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:18px}
 .nav .lnk{font-family:var(--display);text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:700;color:var(--muted);text-decoration:none}
 .nav .lnk:hover,.nav .lnk[aria-current=page]{color:var(--cream)}
@@ -115,6 +115,7 @@ footer a{color:var(--orange-lt)}
 .legal{color:var(--muted);font-size:13.5px;margin-top:22px;max-width:72ch}
 
 @media (max-width:900px){
+  .brand img{height:44px}
   .band .wrap{grid-template-columns:1fr}
   .hero{min-height:0;display:block;padding-block:0 48px}
   .hero-art{position:relative;aspect-ratio:16/10;margin-bottom:8px}

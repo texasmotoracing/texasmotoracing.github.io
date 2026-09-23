@@ -18,8 +18,9 @@ export default function Nav() {
   return (
     <nav className="nav">
       <div className="wrap">
-        <Link className="brand" href="/" aria-label={site.name}>
-          <Image src={asset('/logos/bike.png')} alt={site.name} width={1172} height={451} priority />
+        <Link className="brand" href="/">
+          <Image src={asset('/logos/bike.png')} alt="" width={1172} height={451} priority />
+          <b>{site.name}</b>
         </Link>
         {links.map(([href, label]) => (
           <Link key={href} className="lnk" href={href} aria-current={path === href ? 'page' : undefined}>{label}</Link>
