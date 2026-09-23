@@ -115,7 +115,7 @@ export const subteams = [
  */
 export const leadership: { role: string; name: string; photo?: string }[] = [
   { role: 'Team Principal', name: 'Mario T Hernandez Jr' },
-  { role: 'Technical Director', name: 'John Moreno' },
+  { role: 'Technical Director', name: 'John Paul Moreno' },
   ...subteams.map((t) => ({ role: `${t.name} lead`, name: '' })),
   { role: 'Faculty tutor', name: '' },
 ];
