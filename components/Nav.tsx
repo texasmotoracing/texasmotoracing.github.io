@@ -19,7 +19,7 @@ export default function Nav() {
     <nav className="nav">
       <div className="wrap">
         <Link className="brand" href="/">
-          <Image src={asset('/logos/icon.png')} alt="" width={38} height={38} />
+          <Image src={asset('/logos/crest.png')} alt="" width={38} height={38} />
           <b>{site.name}</b>
         </Link>
         {links.map(([href, label]) => (
