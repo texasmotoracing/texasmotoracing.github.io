@@ -10,6 +10,7 @@ const links = [
   ['/team/', 'Team'],
   ['/sponsor/', 'Sponsor'],
   ['/join/', 'Join'],
+  ['/contact/', 'Contact'],
 ];
 
 export default function Nav() {

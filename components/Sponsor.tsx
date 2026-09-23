@@ -1,4 +1,4 @@
-import { site, tiers } from '@/data/site';
+import { site, tiers, hasLink } from '@/data/site';
 
 export default function Sponsor() {
   const mailto = `mailto:${site.email}?subject=${encodeURIComponent(site.name + ' sponsorship')}`;
@@ -25,7 +25,10 @@ export default function Sponsor() {
           In-kind support — machining, raw stock, composites, suspension components, software seats, dyno or
           track time — is credited at value and often worth more to us than cash.
         </p>
-        <div className="btns"><a className="btn" href={mailto}>Talk to us about sponsoring</a></div>
+        <div className="btns">
+          <a className="btn" href={mailto}>Talk to us about sponsoring</a>
+          {hasLink(site.links.donate) && <a className="btn ghost" href={site.links.donate}>Donate</a>}
+        </div>
       </div>
     </section>
   );

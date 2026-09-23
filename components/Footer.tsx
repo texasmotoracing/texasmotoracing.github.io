@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { site, asset } from '@/data/site';
+import Link from 'next/link';
+import { site, asset, hasLink } from '@/data/site';
 
 export default function Footer() {
   return (
@@ -10,9 +11,17 @@ export default function Footer() {
           <p style={{ margin: '0 0 4px' }}><strong>{site.name}</strong></p>
           <p className="muted" style={{ margin: 0 }}>{site.university} · {site.department}</p>
         </div>
+        <nav className="foot-links" aria-label="Footer">
+          <Link href="/team/">Team</Link>
+          <Link href="/sponsor/">Sponsor</Link>
+          <Link href="/join/">Join</Link>
+          <Link href="/contact/">Contact</Link>
+        </nav>
         <div>
           <p style={{ margin: '0 0 6px' }}><a href={`mailto:${site.email}`}>{site.email}</a></p>
-          <p style={{ margin: 0 }}><a href={site.links.instagram}>Instagram</a></p>
+          {hasLink(site.links.instagram) && <p style={{ margin: '0 0 6px' }}><a href={site.links.instagram}>Instagram</a></p>}
+          {hasLink(site.links.linkedin) && <p style={{ margin: '0 0 6px' }}><a href={site.links.linkedin}>LinkedIn</a></p>}
+          {hasLink(site.links.donate) && <p style={{ margin: 0 }}><a href={site.links.donate}>Donate</a></p>}
         </div>
       </div>
       <div className="wrap">

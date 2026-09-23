@@ -6,6 +6,9 @@
 /** Prefixes a /public path with the deploy base path (e.g. /TexasMotoRacing on a GitHub project site). */
 export const asset = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${path}`;
 
+/** True once a link has been filled in (not blank and not the "#" placeholder). */
+export const hasLink = (url: string) => url !== '' && url !== '#';
+
 export const site = {
   name: 'Texas Moto Racing',
   short: 'TMR',
@@ -25,6 +28,9 @@ export const site = {
     interestForm: 'https://docs.google.com/forms/d/e/1FAIpQLSc89B1AfRKKasxbUqfGXaV42CE8RPRzphLMGyNOvnRMPZ_96Q/viewform',
     application: 'https://docs.google.com/forms/d/e/1FAIpQLSdz_d1V0xsM_rPFiV7LIxhrIZdoXmOgDgBvj9ObmGnOziaGJw/viewform',
     instagram: '#',
+    linkedin: '#',
+    // A payment link (Stripe, Venmo, UT giving page…). The Donate buttons stay hidden until this is set.
+    donate: '',
   },
 
   // The next regulation deadline the header clock counts down to.
@@ -102,6 +108,23 @@ export const subteams = [
   { name: 'Bodywork & aero', blurb: 'Fairing design, CFD, mould making and composite layup.', open: true },
   { name: 'Business & operations', blurb: "Budget control, sponsorship, freight and customs, travel, and the team's public face.", open: true },
 ];
+
+/**
+ * Leadership shown on the Team page. Fill in name and photo as roles are filled — a blank name
+ * shows the role as open and links to the member application. Photos go in public/team/.
+ */
+export const leadership: { role: string; name: string; photo?: string }[] = [
+  { role: 'Team Principal', name: '' },
+  { role: 'Technical Director', name: '' },
+  ...subteams.map((t) => ({ role: `${t.name} lead`, name: '' })),
+  { role: 'Faculty tutor', name: '' },
+];
+
+/**
+ * Sponsor logos, shown on the Sponsor page (and on the home page once there is at least one).
+ * Logos go in public/sponsors/ — e.g. { name: 'Acme', logo: '/sponsors/acme.png', url: 'https://acme.com' }.
+ */
+export const sponsors: { name: string; logo: string; url?: string }[] = [];
 
 /** Sponsorship tiers. These amounts are placeholders — set them to what you actually want. */
 export const tiers = [
