@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: site.name,
     description: `${site.tagline}, competing in the MotoStudent International Competition.`,
-    images: [asset('/logos/crest-full.png')],
+    images: [asset('/art/og.jpg')],
     type: 'website',
   },
 };

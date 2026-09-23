@@ -16,6 +16,8 @@ export const site = {
   // Keep a personal address off the site: this one has to outlive every officer.
   email: 'texasmotoracing@gmail.com',
   bikeNumber: '40',
+  // Credit for the hero illustration. Leave empty to hide the credit line.
+  artist: '',
   edition: 'IX MotoStudent International Competition · 2026–27',
 
   // TODO: paste your real links. Until you do, the buttons point at "#".
