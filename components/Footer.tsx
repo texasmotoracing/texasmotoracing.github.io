@@ -6,7 +6,7 @@ export default function Footer() {
     <footer>
       <div className="wrap">
         <div>
-          <Image src={asset('/logos/ut-white.png')} alt="" width={120} height={62} style={{ opacity: .9, display: 'block', marginBottom: 12, height: 'auto' }} />
+          <Image src={asset('/logos/mark.png')} alt="" width={80} height={80} style={{ opacity: .9, display: 'block', marginBottom: 12, height: 'auto' }} />
           <p style={{ margin: '0 0 4px' }}><strong>{site.name}</strong></p>
           <p className="muted" style={{ margin: 0 }}>{site.university} · {site.department}</p>
         </div>
