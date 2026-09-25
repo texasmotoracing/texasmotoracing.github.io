@@ -11,7 +11,7 @@ export default function Gallery() {
           {photos.map((p) => (
             <figure key={p.src}>
               <Image src={asset(p.src)} alt={p.alt} width={1600} height={1000} />
-              <figcaption>{p.alt} · <span>{p.credit}</span></figcaption>
+              <figcaption>{p.alt} · <span>{p.source ? <a href={p.source} target="_blank" rel="noopener noreferrer">{p.credit}</a> : p.credit}</span></figcaption>
             </figure>
           ))}
         </div>

@@ -3,6 +3,11 @@
 Put real photographs from the MotoStudent competition here, then list them in `data/site.ts`
 under `photos`. The band appears automatically once the list has entries.
 
+Current photos
+- `motostudent-grid.jpg`, `motostudent-electric.jpg` and `motorland-aragon.jpg` are from Wikimedia
+  Commons under CC BY-SA licences. They may stay on the site only with the credit and source link
+  already set in `data/site.ts`. Swap them for MEF press images or your own once you have them.
+
 Where to get them
 - The organiser (Moto Engineering Foundation) publishes press images of each edition. Ask their
   communication team for the press kit and their usage rules. Registered teams usually get access.

@@ -150,8 +150,25 @@ export const marks = [
  * Use real MotoStudent photos: ask the organiser (MEF) for press images and their usage rules,
  * and credit them. See public/photos/README.md.
  */
-export const photos: { src: string; alt: string; credit: string }[] = [
-  // { src: '/photos/aragon-grid.jpg', alt: 'The MotoStudent grid at MotorLand Aragón', credit: 'Photo: MotoStudent / MEF' },
+export const photos: { src: string; alt: string; credit: string; source?: string }[] = [
+  {
+    src: '/photos/motostudent-grid.jpg',
+    alt: 'The front of the electric grid at MotoStudent VI, MotorLand Aragón',
+    credit: 'Photo: Sorianico, CC BY-SA 4.0',
+    source: 'https://commons.wikimedia.org/wiki/File:Parrilla_electric_MotoStudent_VI.jpg',
+  },
+  {
+    src: '/photos/motostudent-electric.jpg',
+    alt: "HTWG Konstanz's eLaketric bike leaving the MotoStudent pit lane",
+    credit: 'Photo: David.RXR23, CC BY-SA 4.0',
+    source: 'https://commons.wikimedia.org/wiki/File:Rennmotorrad_Moto_Student_Electric.jpg',
+  },
+  {
+    src: '/photos/motorland-aragon.jpg',
+    alt: 'MotorLand Aragón, the MotoStudent circuit in Alcañiz, Spain',
+    credit: 'Photo: Willtron, CC BY-SA 3.0',
+    source: 'https://commons.wikimedia.org/wiki/File:Panoramica_Motorland_Arag%C3%B3n.jpg',
+  },
 ];
 
 /**

@@ -100,7 +100,7 @@ tr.now td{background:#1E3050} tr.now td.when{color:var(--orange-lt)}
 .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .shots figure{margin:0;background:var(--surface);border:1px solid var(--line)}
 .shots img{width:100%;height:240px;object-fit:cover;display:block}
-.shots figcaption{padding:10px 14px;font-size:13px;color:var(--muted)} .shots figcaption span{opacity:.7}
+.shots figcaption{padding:10px 14px;font-size:13px;color:var(--muted)} .shots figcaption span{opacity:.7} .shots figcaption a{color:inherit}
 .partners{padding:26px 0;border-block:1px solid var(--line);background:var(--surface)}
 .partners .wrap{display:flex;align-items:center;gap:36px;flex-wrap:wrap}
 .partner-logos{display:flex;align-items:center;gap:36px;flex-wrap:wrap}
