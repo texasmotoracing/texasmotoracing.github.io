@@ -18,7 +18,7 @@ export default function Hero() {
             {site.name} is {site.tagline}. Eighteen months to design, manufacture and race a prototype
             competition motorcycle — finishing on track at MotorLand Aragón, a FIM Grand Prix circuit in Spain.
           </p>
-          <p className="lede">More than twenty countries compete. No Texas university ever has.</p>
+          <p className="lede">Teams from nineteen countries raced the last edition. No Texas university ever has.</p>
           <div className="btns">
             <Link className="btn" href="/join/">Join the founding class</Link>
             <Link className="btn ghost" href="/sponsor/">Sponsor the build</Link>

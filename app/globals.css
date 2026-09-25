@@ -138,6 +138,21 @@ tr.now td{background:#1E3050} tr.now td.when{color:var(--orange-lt)}
 .logo.empty:hover{border-color:var(--orange);color:var(--orange-lt)}
 
 .card .btns{margin-top:20px}
+
+.figures{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin:40px 0 0;background:var(--line);border:1px solid var(--line)}
+.figures>div{background:var(--surface);padding:24px 22px;display:flex;flex-direction:column}
+.figures dd{order:-1;margin:0;font-family:var(--display);font-weight:800;font-size:54px;line-height:1;color:var(--orange-lt);font-variant-numeric:tabular-nums}
+.figures dt{font-family:var(--display);text-transform:uppercase;letter-spacing:.14em;font-size:12.5px;color:var(--muted);margin-top:8px}
+.source{font-size:13.5px;margin:14px 0 0}
+
+.card.path{display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:border-color .16s}
+.card.path:hover{border-color:var(--orange)}
+.card.path .go{margin-top:auto;padding-top:18px;font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:14px;color:var(--orange-lt)}
+
+.updates{list-style:none;margin:40px 0 0;padding:0;display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.updates li{background:var(--surface);padding:22px 26px;display:grid;grid-template-columns:140px 1fr;column-gap:24px}
+.updates time{grid-row:span 2;font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:14px;color:var(--orange-lt);padding-top:3px}
+.updates h3{margin-bottom:6px} .updates p{margin:0;font-size:15.5px;color:#BCC9DC}
 .foot-links{display:flex;flex-direction:column;gap:6px}
 
 footer{border-top:1px solid var(--line);background:var(--surface);padding-block:44px;font-size:15px}
@@ -157,6 +172,8 @@ footer a{color:var(--orange-lt)}
   .clock .wrap{grid-template-columns:repeat(2,1fr)}
   .spec{grid-template-columns:1fr} .spec div:nth-child(odd){border-right:none}
   .nav .lnk{font-size:13px}
+  .figures{grid-template-columns:repeat(2,1fr)}
+  .updates li{grid-template-columns:1fr} .updates time{grid-row:auto;margin-bottom:4px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 

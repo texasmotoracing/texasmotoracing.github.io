@@ -52,10 +52,38 @@ export const site = {
 };
 
 export const stats = [
-  { value: '20+', label: 'Countries competing' },
+  { value: '18', label: 'Months, design to grid' },
   { value: '7', label: 'Graded milestones' },
   { value: '0', label: 'Texas teams before us' },
 ];
+
+/**
+ * The series in numbers, shown on the home page. Every figure needs a source you can point to —
+ * update them when MEF publishes the IX edition's entry list.
+ */
+export const series = {
+  figures: [
+    { value: '85', label: 'Teams at the VIII edition' },
+    { value: '19', label: 'Countries represented' },
+    { value: '2009', label: 'Year the series began' },
+    { value: '2', label: 'Classes: eFuel and Electric' },
+  ],
+  source: 'VIII MotoStudent International Competition, MotorLand Aragón, 15–19 October 2025 (EFE).',
+};
+
+/** Where the home page sends each kind of visitor. */
+export const paths = [
+  { title: 'Meet the team', blurb: 'Six subteams, the people leading them, and the seats still open.', href: '/team/', cta: 'The team' },
+  { title: 'Sponsor the build', blurb: 'Partnership levels, the budget and the calendar, in a six-page packet.', href: '/sponsor/', cta: 'Sponsorship' },
+  { title: 'Join the founding class', blurb: 'No experience required. Every major welcome — the bike needs more than engineers.', href: '/join/', cta: 'How to join' },
+];
+
+/**
+ * Team news for the home page, newest first. The section stays hidden until there is at least one entry.
+ * Only post things that happened: a date, a headline, and a sentence or two.
+ * e.g. { date: '2026-09-01', title: 'Registered for MotoStudent IX', body: 'Our entry is in for the 2026–27 edition.' }
+ */
+export const updates: { date: string; title: string; body: string }[] = [];
 
 export const phases = {
   ms1: {
