@@ -12,6 +12,9 @@ export const hasLink = (url: string) => url !== '' && url !== '#';
 export const site = {
   name: 'Texas Moto Racing',
   short: 'TMR',
+  // The live address, used for link previews, the sitemap and search engines. Change it when the custom
+  // domain (see CNAME) is pointed at GitHub Pages.
+  url: 'https://texasmotoracing.github.io',
   // Naming rule: the team is "at" the university — never written as the university's possession.
   // Never use the university's or a department's name as if it were part of the team name.
   tagline: 'the first motorcycle engineering team at The University of Texas at Austin',

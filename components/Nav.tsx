@@ -23,9 +23,11 @@ export default function Nav() {
           <Image src={asset('/logos/bike.png')} alt="" width={1172} height={451} priority />
           <b>{site.name}</b>
         </Link>
-        {links.map(([href, label]) => (
-          <Link key={href} className="lnk" href={href} aria-current={path === href ? 'page' : undefined}>{label}</Link>
-        ))}
+        <div className="links">
+          {links.map(([href, label]) => (
+            <Link key={href} className="lnk" href={href} aria-current={path === href ? 'page' : undefined}>{label}</Link>
+          ))}
+        </div>
       </div>
     </nav>
   );

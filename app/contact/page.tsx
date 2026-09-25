@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 import { site, hasLink } from '@/data/site';
 
-export const metadata: Metadata = { title: 'Contact' };
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: 'Email Texas Moto Racing about joining, sponsorship, press or anything else.',
+};
 
 const mail = (subject: string) => `mailto:${site.email}?subject=${encodeURIComponent(`${site.name} — ${subject}`)}`;
 

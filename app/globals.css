@@ -6,7 +6,10 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--ground);color:var(--cream);font-family:var(--body);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--ground);color:var(--cream);font-family:var(--body);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+main{flex:1}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--orange);color:var(--cream);padding:10px 16px;font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.1em;text-decoration:none}
+.skip:focus{top:12px}
 .wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:20px}
 section{padding-block:clamp(60px,8vw,110px);position:relative}
 h1,h2,h3{font-family:var(--display);text-transform:uppercase;margin:0;text-wrap:balance;line-height:.98}
@@ -28,7 +31,8 @@ img{max-width:100%;height:auto}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream);margin-right:auto}
 .brand img{height:56px;width:auto}
 .brand b{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:18px}
-.nav .lnk{font-family:var(--display);text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:700;color:var(--muted);text-decoration:none}
+.nav .links{display:flex;gap:22px}
+.nav .lnk{white-space:nowrap;font-family:var(--display);text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:700;color:var(--muted);text-decoration:none}
 .nav .lnk:hover,.nav .lnk[aria-current=page]{color:var(--cream)}
 .nav .lnk[aria-current=page]{box-shadow:inset 0 -2px var(--orange-lt)}
 
@@ -171,7 +175,10 @@ footer a{color:var(--orange-lt)}
   .g3,.g2,.kit,.tiers,.packet,.shots{grid-template-columns:1fr}
   .clock .wrap{grid-template-columns:repeat(2,1fr)}
   .spec{grid-template-columns:1fr} .spec div:nth-child(odd){border-right:none}
-  .nav .lnk{font-size:13px}
+  .nav .wrap{gap:0 22px;padding-bottom:0}
+  .nav .links{width:100%;overflow-x:auto;scrollbar-width:none;gap:20px;padding:4px 24px 10px 0;margin-top:-4px;-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+  .nav .links::-webkit-scrollbar{display:none}
+  .nav .lnk{font-size:13px;line-height:2}
   .figures{grid-template-columns:repeat(2,1fr)}
   .updates li{grid-template-columns:1fr} .updates time{grid-row:auto;margin-bottom:4px}
 }
