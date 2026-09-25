@@ -1,4 +1,4 @@
-import { site } from '@/data/site';
+import { site, hasLink, asset } from '@/data/site';
 
 export default function Sponsor() {
   const mailto = `mailto:${site.email}?subject=${encodeURIComponent(site.name + ' sponsorship')}`;
@@ -21,7 +21,7 @@ export default function Sponsor() {
             </p>
           </div>
           <div className="btns" style={{ marginTop: 0 }}>
-            <a className="btn" href={site.sponsorPacket} download>Download the packet (PDF)</a>
+            <a className="btn" href={asset(site.sponsorPacket)} download>Download the packet (PDF)</a>
             <a className="btn ghost" href={mailto}>Talk to us</a>
           </div>
         </div>
@@ -29,6 +29,11 @@ export default function Sponsor() {
           In-kind support — machining, raw stock, composites, suspension components, software seats, dyno or
           track time — is credited at value and often worth more to us than cash.
         </p>
+        {hasLink(site.links.donate) && (
+          <div className="btns">
+            <a className="btn ghost" href={site.links.donate}>Donate</a>
+          </div>
+        )}
       </div>
     </section>
   );
