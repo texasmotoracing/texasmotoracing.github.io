@@ -8,32 +8,38 @@ const initials = (name: string) => {
 };
 
 export default function Roster() {
+  const filled = leadership.filter((m) => m.name);
+  const open = leadership.filter((m) => !m.name);
   return (
     <section id="leadership">
       <div className="wrap">
         <p className="eyebrow">Leadership</p>
         <h2>Who runs it</h2>
-        <p className="lede">
-          The founding officers. Open roles are filled from the member application — apply and tell us which one you want.
-        </p>
-        <div className="roster">
-          {leadership.map((m) => {
-            const body = (
-              <>
-                <div className="face">
-                  {m.photo
-                    ? <Image src={asset(m.photo)} alt="" width={400} height={400} />
-                    : <span>{m.name ? initials(m.name) : '?'}</span>}
-                </div>
-                <div className="who">{m.name || 'Open role'}</div>
+        <p className="lede">The founding officers, and the faculty tutor who signs off on the engineering.</p>
+        <div className="leaders">
+          {filled.map((m) => (
+            <div key={m.role} className="leader">
+              <div className="face">
+                {m.photo
+                  ? <Image src={asset(m.photo)} alt="" width={400} height={400} />
+                  : <span>{initials(m.name)}</span>}
+              </div>
+              <div>
                 <div className="role">{m.role}</div>
-              </>
-            );
-            return m.name
-              ? <div key={m.role} className="person">{body}</div>
-              : <a key={m.role} className="person vacant" href={site.links.application}>{body}</a>;
-          })}
+                <div className="who">{m.name}</div>
+              </div>
+            </div>
+          ))}
         </div>
+        {open.length > 0 && (
+          <div className="openroles">
+            <div>
+              <p className="eyebrow" style={{ marginBottom: 10 }}>{open.length} lead roles open</p>
+              <ul>{open.map((m) => <li key={m.role}>{m.role}</li>)}</ul>
+            </div>
+            <a className="btn" href={site.links.application}>Apply for a lead role</a>
+          </div>
+        )}
       </div>
     </section>
   );

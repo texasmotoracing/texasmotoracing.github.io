@@ -1,7 +1,7 @@
 import Hero from '@/components/Hero';
 import Clock from '@/components/Clock';
 import Series from '@/components/Series';
-import Gallery from '@/components/Gallery';
+import Showcase from '@/components/Showcase';
 import Machine from '@/components/Machine';
 import Stripe from '@/components/Stripe';
 import Updates from '@/components/Updates';
@@ -15,7 +15,7 @@ export default function Page() {
       <Hero />
       <Clock />
       <Series />
-      <Gallery />
+      <Showcase />
       <Stripe />
       <Machine />
       <Updates />
