@@ -1,13 +1,12 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { site, asset } from '@/data/site';
+import { site } from '@/data/site';
 
 export default function Hero() {
   return (
     <header className="hero" id="top">
       {/* Commissioned illustration — see public/art/README.md for the credit and usage notes. */}
       <div className="hero-art" aria-hidden="true">
-        <Image src={asset('/art/hero-bike.jpg')} alt="" fill priority sizes="100vw" />
+        <Image src="/art/hero-bike.jpg" alt="" fill priority sizes="100vw" />
       </div>
       <div className="hero-scrim" aria-hidden="true" />
       <div className="wrap">
@@ -20,8 +19,8 @@ export default function Hero() {
           </p>
           <p className="lede">More than twenty countries compete. No Texas university ever has.</p>
           <div className="btns">
-            <Link className="btn" href="/join/">Join the founding class</Link>
-            <Link className="btn ghost" href="/sponsor/">Sponsor the build</Link>
+            <a className="btn" href="#join">Join the founding class</a>
+            <a className="btn ghost" href="#sponsor">Sponsor the build</a>
           </div>
         </div>
       </div>

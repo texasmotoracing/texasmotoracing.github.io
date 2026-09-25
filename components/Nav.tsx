@@ -1,30 +1,23 @@
-'use client';
 import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { site, asset } from '@/data/site';
+import { site } from '@/data/site';
 
 const links = [
-  ['/competition/', 'Competition'],
-  ['/calendar/', 'Calendar'],
-  ['/team/', 'Team'],
-  ['/sponsor/', 'Sponsor'],
-  ['/join/', 'Join'],
-  ['/contact/', 'Contact'],
+  ['#competition', 'Competition'],
+  ['#calendar', 'Calendar'],
+  ['#team', 'Team'],
+  ['#sponsor', 'Sponsor'],
+  ['#join', 'Join'],
 ];
 
 export default function Nav() {
-  // trailingSlash is on, but normalise anyway so matching never depends on it.
-  const path = usePathname().replace(/\/?$/, '/');
   return (
     <nav className="nav">
       <div className="wrap">
-        <Link className="brand" href="/">
-          <Image src={asset('/logos/bike.png')} alt="" width={1172} height={451} priority />
-          <b>{site.name}</b>
-        </Link>
+        <a className="brand" href="#top" aria-label={site.name}>
+          <Image src="/logos/bike.png" alt={site.name} width={1172} height={451} priority />
+        </a>
         {links.map(([href, label]) => (
-          <Link key={href} className="lnk" href={href} aria-current={path === href ? 'page' : undefined}>{label}</Link>
+          <a key={href} className="lnk" href={href}>{label}</a>
         ))}
       </div>
     </nav>

@@ -3,18 +3,13 @@
  * Change copy, links and numbers in this file — not in the components.
  */
 
-/** Prefixes a /public path with the deploy base path (e.g. /TexasMotoRacing on a GitHub project site). */
-export const asset = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${path}`;
-
-/** True once a link has been filled in (not blank and not the "#" placeholder). */
-export const hasLink = (url: string) => url !== '' && url !== '#';
-
 export const site = {
   name: 'Texas Moto Racing',
   short: 'TMR',
-  tagline: "UT Austin's first motorcycle engineering team",
+  // Naming rule: the team is "at" the university, never "UT Austin's" or "the University's".
+  // Never use the university's or a department's name as if it were part of the team name.
+  tagline: 'the first motorcycle engineering team at The University of Texas at Austin',
   university: 'The University of Texas at Austin',
-  department: 'Walker Department of Mechanical Engineering',
   // Team address — create this mailbox before the site goes public.
   // Keep a personal address off the site: this one has to outlive every officer.
   email: 'texasmotoracing@gmail.com',
@@ -25,12 +20,9 @@ export const site = {
 
   // TODO: paste your real links. Until you do, the buttons point at "#".
   links: {
-    interestForm: 'https://docs.google.com/forms/d/e/1FAIpQLSc89B1AfRKKasxbUqfGXaV42CE8RPRzphLMGyNOvnRMPZ_96Q/viewform',
-    application: 'https://docs.google.com/forms/d/e/1FAIpQLSdz_d1V0xsM_rPFiV7LIxhrIZdoXmOgDgBvj9ObmGnOziaGJw/viewform',
-    instagram: 'https://www.instagram.com/texasmotoracing/',
-    linkedin: '#',
-    // A payment link (Stripe, Venmo, UT giving page…). The Donate buttons stay hidden until this is set.
-    donate: '',
+    interestForm: '#',
+    application: '#',
+    instagram: '#',
   },
 
   // The next regulation deadline the header clock counts down to.
@@ -43,6 +35,8 @@ export const site = {
 
   // Program cost figure shown on the sponsorship section. Remove if you'd rather keep it private.
   programCost: '$95,000',
+  // The sponsor packet (PDF) lives in public/docs/. Replace the file to update it; keep the name.
+  sponsorPacket: '/docs/TMR_Sponsor_Packet.pdf',
 
   // Interest-form responses to date. Update as it grows — it appears on the Team section.
   interestCount: 23,
@@ -109,23 +103,6 @@ export const subteams = [
   { name: 'Business & operations', blurb: "Budget control, sponsorship, freight and customs, travel, and the team's public face.", open: true },
 ];
 
-/**
- * Leadership shown on the Team page. Fill in name and photo as roles are filled — a blank name
- * shows the role as open and links to the member application. Photos go in public/team/.
- */
-export const leadership: { role: string; name: string; photo?: string }[] = [
-  { role: 'Team Principal', name: 'Mario T Hernandez Jr', photo: '/team/mario-hernandez.jpg' },
-  { role: 'Technical Director', name: 'John Paul Moreno', photo: '/team/john-paul-moreno.jpg' },
-  ...subteams.map((t) => ({ role: `${t.name} lead`, name: '' })),
-  { role: 'Faculty tutor', name: 'Dr. Adrian Rodriguez', photo: '/team/adrian-rodriguez.jpg' },
-];
-
-/**
- * Sponsor logos, shown on the Sponsor page (and on the home page once there is at least one).
- * Logos go in public/sponsors/ — e.g. { name: 'Acme', logo: '/sponsors/acme.png', url: 'https://acme.com' }.
- */
-export const sponsors: { name: string; logo: string; url?: string }[] = [];
-
 /** Sponsorship tiers. These amounts are placeholders — set them to what you actually want. */
 export const tiers = [
   { name: 'Paddock', amount: '$1,000+', perks: ['Logo on the website and team media', 'Season updates and build photos', 'Invitation to the roll-out'] },
@@ -133,12 +110,31 @@ export const tiers = [
   { name: 'Works', amount: '$15,000+', perks: ['Title placement on the bike and team truck', 'Everything in Grid', 'Design reviews with the team, on your terms'] },
 ];
 
-export const wordmark = { src: asset('/logos/bike.png'), alt: 'Texas Moto Racing bike wordmark', caption: 'Wordmark · the bike' };
+export const wordmark = { src: '/logos/bike.png', alt: 'Texas Moto Racing bike wordmark', caption: 'Wordmark · the bike' };
 
 export const marks = [
-  { src: asset('/logos/crest.png'), alt: 'Crest', caption: 'Crest · official' },
-  { src: asset('/logos/plate.png'), alt: 'Number board', caption: 'Number board · livery' },
-  { src: asset('/logos/speed.png'), alt: 'Speed mark', caption: 'Speed mark · apparel' },
+  { src: '/logos/crest.png', alt: 'Crest', caption: 'Crest · official' },
+  { src: '/logos/plate.png', alt: 'Number board', caption: 'Number board · livery' },
+  { src: '/logos/speed.png', alt: 'Speed mark', caption: 'Speed mark · apparel' },
+];
+
+/**
+ * Photos of the series, shown in a band under the competition section.
+ * Put the files in public/photos/ and list them here. Leave the list empty to hide the band.
+ * Use real MotoStudent photos: ask the organiser (MEF) for press images and their usage rules,
+ * and credit them. See public/photos/README.md.
+ */
+export const photos: { src: string; alt: string; credit: string }[] = [
+  // { src: '/photos/aragon-grid.jpg', alt: 'The MotoStudent grid at MotorLand Aragón', credit: 'Photo: MotoStudent / MEF' },
+];
+
+/**
+ * Organiser and sanctioning-body logos, shown in a strip under the competition section.
+ * Ask MEF for the official files and their usage rules before adding them. Leave empty to hide.
+ */
+export const partners: { name: string; src: string; href: string }[] = [
+  // { name: 'MotoStudent International Competition', src: '/partners/motostudent.png', href: 'https://www.motostudent.com' },
+  // { name: 'FIM', src: '/partners/fim.png', href: 'https://www.fim-moto.com' },
 ];
 
 /** The HornsLink registration answers, shown to prospective members. */

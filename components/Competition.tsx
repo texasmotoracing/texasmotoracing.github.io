@@ -5,12 +5,13 @@ export default function Competition() {
     <section id="competition">
       <div className="wrap">
         <p className="eyebrow">The competition</p>
-        <h2>The two-wheeled Formula SAE</h2>
+        <h2>Design it. Build it. Race it.</h2>
         <p className="lede">
-          MotoStudent is run by the Moto Engineering Foundation under FIM sanction. Every team gets the same
-          component kit and the same eighteen months, then is judged in two independent phases. The rules
-          require that registered students do all of the design, assembly and manufacturing — no professional
-          engineers or mechanics touch the bike.
+          MotoStudent is the international engineering competition for prototype racing motorcycles, run by
+          the Moto Engineering Foundation under FIM sanction. Every team gets the same component kit and the
+          same eighteen months, then is judged in two independent phases. The rules require that registered
+          students do all of the design, assembly and manufacturing — no professional engineers or mechanics
+          touch the bike.
         </p>
         <div className="grid g2">
           <div className="phase">
